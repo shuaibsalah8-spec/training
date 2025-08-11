@@ -1,19 +1,3 @@
-"""
-fractal_endless_github.py
-
-Creates a smooth "endless" zooming Mandelbrot animation and saves it as an MP4 file.
-Designed to be run locally or inside a GitHub Actions runner (ffmpeg required for MP4).
-
-Usage (local):
-    python fractal_endless_github.py --frames 180 --width 800 --height 600 --output fractal.mp4
-
-Dependencies:
-    numpy, matplotlib
-    (ffmpeg for MP4 saving; GitHub Actions runner already has ffmpeg)
-
-Author: ChatGPT
-"""
-
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
