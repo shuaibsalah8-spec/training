@@ -22,4 +22,4 @@ jobs:
 
       - name: Run my script
         run: |
-          python script1.py/start.py
+          python scripts/script1.py/start.py
