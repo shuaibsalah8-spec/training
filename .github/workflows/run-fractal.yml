@@ -6,7 +6,6 @@ on:
 jobs:
   run-script:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -21,9 +20,11 @@ jobs:
           python -m pip install --upgrade pip
           pip install numpy matplotlib
 
+      - name: Install ffmpeg
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+
       - name: Run fractal script
-        run: |
-          python script.py/start.py
+        run: python script.py/start.py
 
       - name: Upload fractal output
         uses: actions/upload-artifact@v4
