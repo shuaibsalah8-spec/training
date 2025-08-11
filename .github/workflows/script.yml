@@ -1,0 +1,25 @@
+name: Run My Python Script
+
+on:
+  workflow_dispatch:   # lets you trigger manually from the Actions tab
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install numpy matplotlib
+
+      - name: Run my script
+        run: |
+          python script1.py/start.py
